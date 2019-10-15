@@ -28,7 +28,13 @@ class MoviesController < ApplicationController
       @filter_ratings = Hash[@all_ratings.map {|rating| [rating, rating]}]
     end
 
+    #part 3 remeber with session
+    session[:sort] = params[:sort] if session[:sort] != params[:sort]
+    session[:ratings] = params[:ratings] if session[:ratings] != params[:ratings]
+
+
     @movies = Movie.where(rating: @filter_ratings.keys).order(sort_by)
+
 
   end
 
