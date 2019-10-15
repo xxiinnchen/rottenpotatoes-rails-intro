@@ -150,6 +150,8 @@ GEM
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
     rdoc (4.3.0)
+    rerun (0.13.0)
+      listen (~> 3.0)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -229,6 +231,7 @@ DEPENDENCIES
   pg (~> 0.21)
   rails (= 4.2.10)
   rails_12factor
+  rerun
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -243,4 +246,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
