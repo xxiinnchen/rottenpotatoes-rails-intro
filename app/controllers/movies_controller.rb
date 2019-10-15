@@ -53,7 +53,7 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.create!(movie_params)
     flash[:notice] = "#{@movie.title} was successfully created."
-    flash.keep(:notice)
+    flash.keep
     redirect_to movies_path
   end
 
@@ -65,7 +65,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find params[:id]
     @movie.update_attributes!(movie_params)
     flash[:notice] = "#{@movie.title} was successfully updated."
-    flash.keep(:notice)
+    flash.keep
     redirect_to movie_path(@movie)
   end
 
@@ -73,7 +73,7 @@ class MoviesController < ApplicationController
     @movie = Movie.find(params[:id])
     @movie.destroy
     flash[:notice] = "Movie '#{@movie.title}' deleted."
-    flash.keep(:notice)
+    flash.keep
     redirect_to movies_path
   end
 
